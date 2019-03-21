@@ -3,9 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.168
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Taschenrechner", "Taschenrechner\Taschenrechner.csproj", "{0BEB1AC4-F1AF-4C4F-9B8A-0419B5102407}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Taschenrechner", "Taschenrechner\Taschenrechner.csproj", "{0BEB1AC4-F1AF-4C4F-9B8A-0419B5102407}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Taschenrechner.Tests", "Taschenrechner.Tests\Taschenrechner.Tests.csproj", "{F61A7BCF-510C-4FE0-A5A0-98D1C9BA2B5F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Taschenrechner.Tests.NUnit.DotNetFramework", "Taschenrechner.Tests.NUnit.DotNetFramework\Taschenrechner.Tests.NUnit.DotNetFramework.csproj", "{154E2DB6-BBE5-46A4-9567-9B89455EBE07}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Taschenrechner.Tests.XUnit", "Taschenrechner.Tests.XUnit\Taschenrechner.Tests.XUnit.csproj", "{7E4BB87A-0741-42DA-A309-DCC8F911351A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +25,14 @@ Global
 		{F61A7BCF-510C-4FE0-A5A0-98D1C9BA2B5F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F61A7BCF-510C-4FE0-A5A0-98D1C9BA2B5F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F61A7BCF-510C-4FE0-A5A0-98D1C9BA2B5F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{154E2DB6-BBE5-46A4-9567-9B89455EBE07}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{154E2DB6-BBE5-46A4-9567-9B89455EBE07}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{154E2DB6-BBE5-46A4-9567-9B89455EBE07}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{154E2DB6-BBE5-46A4-9567-9B89455EBE07}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7E4BB87A-0741-42DA-A309-DCC8F911351A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7E4BB87A-0741-42DA-A309-DCC8F911351A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7E4BB87A-0741-42DA-A309-DCC8F911351A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7E4BB87A-0741-42DA-A309-DCC8F911351A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
