@@ -8,5 +8,16 @@ namespace BankOfEvil
 {
     public class BankAccount
     {
+        public int Balance { get; set; }
+
+        public void Deposit(decimal v)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Withdraw(decimal v)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
