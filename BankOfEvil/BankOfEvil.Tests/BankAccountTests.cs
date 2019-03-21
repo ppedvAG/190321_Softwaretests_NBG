@@ -23,22 +23,18 @@ namespace BankOfEvil.Tests
         }
 
         [TestMethod]
-        [DataRow(10)]
-        [DataRow(20)]
-        [DataRow(100)]
-        public void BankAccount_New_Konto_Gets_valid_Balance_From_Constructor(decimal validBalanceForConstructor)
+        public void BankAccount_New_Konto_Gets_valid_Balance_From_Constructor()
         {
+            const decimal validBalanceForConstructor = 10m;
             var a = new BankAccount(validBalanceForConstructor);
             Assert.AreEqual(validBalanceForConstructor, a.Balance);
         }
 
         [TestMethod]
-        [DataRow(10)]
-        [DataRow(20)]
-        [DataRow(100)]
         public void BankAccount_New_Konto_Gets_invalid_Balance_From_Constructor_Throws_ArgumentException(decimal validBalanceForConstructor)
         {
-            Assert.ThrowsException<ArgumentException>(() => new BankAccount(validBalanceForConstructor));
+            const decimal invalidBalanceForConstructor = -10m;
+            Assert.ThrowsException<ArgumentException>(() => new BankAccount(invalidBalanceForConstructor));
         }
 
         #region Deposit()
@@ -67,12 +63,10 @@ namespace BankOfEvil.Tests
 
         // Was wenn der Kunde -2m einzahlt ?
         [TestMethod]
-        [DataRow(-1)]
-        [DataRow(-10)]
-        public void BankAccount_Deposit_Negative_Value_Throws_ArgumentException(decimal negativeValue)
+        public void BankAccount_Deposit_Negative_Value_Throws_ArgumentException()
         {
             var a = new BankAccount();
-            Assert.ThrowsException<ArgumentException>(() => a.Deposit(negativeValue));
+            Assert.ThrowsException<ArgumentException>(() => a.Deposit(decimal.MinusOne));
         }
 
         [TestMethod]
@@ -116,12 +110,10 @@ namespace BankOfEvil.Tests
         }
 
         [TestMethod]
-        [DataRow(-1)]
-        [DataRow(-10)]
-        public void BankAccount_Withdraw_Negative_Value_Throws_ArgumentException(decimal negativeValue)
+        public void BankAccount_Withdraw_Negative_Value_Throws_ArgumentException()
         {
             var a = new BankAccount(10m);
-            Assert.ThrowsException<ArgumentException>(() => a.Withdraw(negativeValue));
+            Assert.ThrowsException<ArgumentException>(() => a.Withdraw(decimal.MinusOne));
         }
 
         [TestMethod]
