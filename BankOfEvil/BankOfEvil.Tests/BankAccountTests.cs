@@ -31,7 +31,7 @@ namespace BankOfEvil.Tests
         }
 
         [TestMethod]
-        public void BankAccount_New_Konto_Gets_invalid_Balance_From_Constructor_Throws_ArgumentException(decimal validBalanceForConstructor)
+        public void BankAccount_New_Konto_Gets_invalid_Balance_From_Constructor_Throws_ArgumentException()
         {
             const decimal invalidBalanceForConstructor = -10m;
             Assert.ThrowsException<ArgumentException>(() => new BankAccount(invalidBalanceForConstructor));
