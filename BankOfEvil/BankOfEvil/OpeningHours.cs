@@ -40,6 +40,10 @@ namespace BankOfEvil
                    openTime[dateTime.DayOfWeek].ClosedAt > dateTime.TimeOfDay;
         }
 
-
+        public bool IsNowOpen()
+        {
+            return IsOpen(DateTime.Now); // UnitTest funzt am Freitag aber am Sonntag nicht !!!
+        }
+            
     }
 }
