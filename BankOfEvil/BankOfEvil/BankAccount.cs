@@ -8,6 +8,17 @@ namespace BankOfEvil
 {
     public class BankAccount
     {
+        private decimal v;
+
+        public BankAccount()
+        {
+        }
+
+        public BankAccount(decimal v)
+        {
+            this.v = v;
+        }
+
         public int Balance { get; set; }
 
         public void Deposit(decimal v)

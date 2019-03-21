@@ -22,6 +22,25 @@ namespace BankOfEvil.Tests
             Assert.AreEqual(0, a.Balance);
         }
 
+        [TestMethod]
+        [DataRow(10)]
+        [DataRow(20)]
+        [DataRow(100)]
+        public void BankAccount_New_Konto_Gets_valid_Balance_From_Constructor(decimal validBalanceForConstructor)
+        {
+            var a = new BankAccount(validBalanceForConstructor);
+            Assert.AreEqual(validBalanceForConstructor, a.Balance);
+        }
+
+        [TestMethod]
+        [DataRow(10)]
+        [DataRow(20)]
+        [DataRow(100)]
+        public void BankAccount_New_Konto_Gets_invalid_Balance_From_Constructor_Throws_ArgumentException(decimal validBalanceForConstructor)
+        {
+            Assert.ThrowsException<ArgumentException>(() => new BankAccount(validBalanceForConstructor));
+        }
+
         #region Deposit()
         [TestMethod]
         public void BankAccount_can_Deposit()
@@ -70,8 +89,7 @@ namespace BankOfEvil.Tests
         [TestMethod]
         public void BankAccount_can_Withdraw()
         {
-            var a = new BankAccount();
-            a.Deposit(10m);
+            var a = new BankAccount(10m);
 
             a.Withdraw(3m);
             Assert.AreEqual(7m, a.Balance);
@@ -83,8 +101,7 @@ namespace BankOfEvil.Tests
         [TestMethod]
         public void BankAccount_Withdraw_0_Balance_does_not_change()
         {
-            var a = new BankAccount();
-            a.Deposit(10.55555m);
+            var a = new BankAccount(10.55555m);
 
             a.Withdraw(0m);
             Assert.AreEqual(10.55555m, a.Balance);
@@ -93,8 +110,7 @@ namespace BankOfEvil.Tests
         [TestMethod]
         public void BankAccount_Withdraw_over_Balance_throws_InvalidOperationException()
         {
-            var a = new BankAccount();
-            a.Deposit(10m);
+            var a = new BankAccount(10m);
 
             Assert.ThrowsException<InvalidOperationException>(() => a.Withdraw(12m));
         }
@@ -104,8 +120,7 @@ namespace BankOfEvil.Tests
         [DataRow(-10)]
         public void BankAccount_Withdraw_Negative_Value_Throws_ArgumentException(decimal negativeValue)
         {
-            var a = new BankAccount();
-            a.Deposit(10m);
+            var a = new BankAccount(10m);
             Assert.ThrowsException<ArgumentException>(() => a.Withdraw(negativeValue));
         }
 
