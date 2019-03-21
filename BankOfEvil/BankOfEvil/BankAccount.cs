@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BankOfEvil
 {
-    public class Bankkonto
+    public class BankAccount
     {
     }
 }
