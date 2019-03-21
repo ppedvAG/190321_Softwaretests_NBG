@@ -8,27 +8,35 @@ namespace BankOfEvil
 {
     public class BankAccount
     {
-        private decimal v;
 
         public BankAccount()
         {
         }
 
-        public BankAccount(decimal v)
+        public BankAccount(decimal Balance)
         {
-            this.v = v;
+            this.Balance = Balance;
         }
 
-        public int Balance { get; set; }
+        public decimal Balance { get; protected set; }
 
-        public void Deposit(decimal v)
+        public void Deposit(decimal value)
         {
-            throw new NotImplementedException();
+            if (value < 0)
+                throw new ArgumentException();
+            Balance += value;
         }
 
-        public void Withdraw(decimal v)
+        public void Withdraw(decimal value)
         {
-            throw new NotImplementedException();
+            if (value < 0)
+                throw new ArgumentException();
+            if (Balance - value < 0)
+                throw new InvalidOperationException();
+            checked
+            {
+                Balance -= value;
+            }
         }
     }
 }

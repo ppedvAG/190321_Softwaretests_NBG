@@ -72,8 +72,7 @@ namespace BankOfEvil.Tests
         [TestMethod]
         public void BankAccount_Deposit_over_MaxValue_Throws_OverflowException()
         {
-            var a = new BankAccount();
-            a.Deposit(decimal.MaxValue);
+            var a = new BankAccount(decimal.MaxValue);
 
             Assert.ThrowsException<OverflowException>(() => a.Deposit(1m));
         }
@@ -119,9 +118,7 @@ namespace BankOfEvil.Tests
         [TestMethod]
         public void BankAccount_Withdraw_under_MinValue_Throws_OverflowException()
         {
-            var a = new BankAccount();
-            a.Withdraw(decimal.MinValue);
-
+            var a = new BankAccount(decimal.MinValue);
             Assert.ThrowsException<OverflowException>(() => a.Withdraw(1m));
         }
         #endregion
