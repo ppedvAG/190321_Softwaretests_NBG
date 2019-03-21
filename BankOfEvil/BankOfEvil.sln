@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.168
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BankOfEvil", "BankOfEvil\BankOfEvil.csproj", "{350D22A4-D737-411E-946C-013DE0B23DFC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BankOfEvil.Tests", "BankOfEvil.Tests\BankOfEvil.Tests.csproj", "{48C533F5-529E-45B3-A540-3D7AF2AFF0AD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{350D22A4-D737-411E-946C-013DE0B23DFC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{350D22A4-D737-411E-946C-013DE0B23DFC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{350D22A4-D737-411E-946C-013DE0B23DFC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{350D22A4-D737-411E-946C-013DE0B23DFC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{48C533F5-529E-45B3-A540-3D7AF2AFF0AD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{48C533F5-529E-45B3-A540-3D7AF2AFF0AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{48C533F5-529E-45B3-A540-3D7AF2AFF0AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{48C533F5-529E-45B3-A540-3D7AF2AFF0AD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {082C59A8-BF6F-4220-9B43-550DEF96D624}
+	EndGlobalSection
+EndGlobal
