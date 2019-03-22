@@ -46,5 +46,20 @@ namespace ppedv.ProjectSelma.Logic
             }
             return persons;
         }
+
+        public int SaveRecruitedPeopleInDB(IEnumerable<Person> people)
+        {
+            int savedPersons = 0;
+            foreach (var item in people)
+            {
+                try
+                {
+                    repository.Add(item);
+                    savedPersons++;
+                }
+                catch (Exception){ }
+            }
+            return savedPersons;
+        }
     }
 }

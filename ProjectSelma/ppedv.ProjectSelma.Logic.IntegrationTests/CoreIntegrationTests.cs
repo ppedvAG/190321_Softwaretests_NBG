@@ -66,5 +66,14 @@ namespace ppedv.ProjectSelma.Logic.IntegrationTests
             var result = core.GetAllPeople();
             Assert.Equal(5, result.Count());
         }
+
+        [Fact]
+        public void Core_Can_SaveRecruitedPeopleInDB()
+        {
+            var people = core.RecruitPersons(50);
+            var savedPeople = core.SaveRecruitedPeopleInDB(people);
+
+            Assert.Equal(50, savedPeople);
+        }
     }
 }
