@@ -1,4 +1,5 @@
-﻿using FluentAssertions;
+﻿using AutoFixture;
+using FluentAssertions;
 using ppedv.ProjectSelma.Domain;
 using System;
 using System.Collections.Generic;
@@ -85,6 +86,55 @@ namespace ppedv.ProjectSelma.Data.EF.Tests
         public void EFContext_Can_CRUD_Person_Fluent()
         {
             Person p = new Person { FirstName = "Tom", LastName = "Ate", Age = 10, Balance = 100 };
+            string newLastName = "Atinger";
+
+            // Test: Create
+            using (var context = new EFContext(connectionString))
+            {
+                context.Person.Add(p); // Insert
+                context.SaveChanges();
+            }
+            // Check für Create
+            using (var context = new EFContext(connectionString))
+            {
+                var loadedPerson = context.Person.Find(p.ID);
+                loadedPerson.Should().NotBeNull();       // Assert.NotNull(loadedPerson);
+                loadedPerson.Should().BeEquivalentTo(p); // ObjectGraph-Vergleich
+
+                // Update
+                loadedPerson.LastName = newLastName;
+                context.SaveChanges();
+            }
+
+            // Check für Update
+            using (var context = new EFContext(connectionString))
+            {
+                var loadedPerson = context.Person.Find(p.ID);
+                loadedPerson.Should().NotBeNull();
+                loadedPerson.LastName.Should().Be(newLastName);
+
+                // Delete
+                context.Person.Remove(loadedPerson);
+                context.SaveChanges();
+            }
+
+            // Check für Delete
+            using (var context = new EFContext(connectionString))
+            {
+                var loadedPerson = context.Person.Find(p.ID);
+                loadedPerson.Should().BeNull();
+            }
+        }
+
+        [Fact]
+        public void EFContext_Can_CRUD_Person_Autofix_Fluent()
+        {
+            var fix = new Fixture();
+
+            // fix.Create<Person>(); // --> Einzelne Person
+            // fix.CreateMany<Person>(); // --> Mehrere Personen
+
+            var p = fix.Create<Person>();
             string newLastName = "Atinger";
 
             // Test: Create
