@@ -1,0 +1,16 @@
+Hallo vom Michi :)
+
+
+Links:
+https://github.com/ppedvAG/190321_Softwaretests_NBG
+https://www.amazon.de/ZenScreen-tragbarer-IPS-Panel-Blaulichtfilter-dunkel-grau/dp/B071R31L1G/ref=sr_1_1?ie=UTF8&qid=1553161627&sr=8-1&keywords=asus+usb+monitor
+
+Gratis-Variante von "Fakes":
+https://github.com/tonerdo/pose
+
+FluentAssertions für lesbare Tests:
+    https://fluentassertions.com/documentation/
+    
+
+Verbindunsstrings für DBs
+https://www.connectionstrings.com/
