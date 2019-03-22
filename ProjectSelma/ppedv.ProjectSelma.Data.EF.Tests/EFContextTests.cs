@@ -81,7 +81,6 @@ namespace ppedv.ProjectSelma.Data.EF.Tests
             }
         }
 
-
         [Fact]
         public void EFContext_Can_CRUD_Person_Fluent()
         {
@@ -177,5 +176,17 @@ namespace ppedv.ProjectSelma.Data.EF.Tests
                 loadedPerson.Should().BeNull();
             }
         }
+
+        #region yield
+        //public IEnumerable<int> GetAllUneven()
+        //{
+        //    for (int i = 0; i < 100; i++)
+        //    {
+        //        if (i % 2 == 1)
+        //            yield return i;
+        //    }
+        //    yield return 555;
+        //} 
+        #endregion
     }
 }
