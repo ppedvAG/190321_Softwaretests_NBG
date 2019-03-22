@@ -91,6 +91,10 @@
       <Project>{296821f7-d7ca-4be6-a317-60de8b167065}</Project>
       <Name>ppedv.ProjectSelma.Domain</Name>
     </ProjectReference>
+    <ProjectReference Include="..\ppedv.ProjectSelma.Logic.Driver\ppedv.ProjectSelma.Logic.Driver.csproj">
+      <Project>{5B03AEB2-9F3F-4911-9ACB-158ADB9BEAAF}</Project>
+      <Name>ppedv.ProjectSelma.Logic.Driver</Name>
+    </ProjectReference>
     <ProjectReference Include="..\ppedv.ProjectSelma.Logic\ppedv.ProjectSelma.Logic.csproj">
       <Project>{eb937cb3-97b7-4fbd-ab47-dc2e63da912a}</Project>
       <Name>ppedv.ProjectSelma.Logic</Name>

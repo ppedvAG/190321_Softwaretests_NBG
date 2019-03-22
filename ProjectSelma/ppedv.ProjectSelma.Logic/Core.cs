@@ -9,14 +9,14 @@ namespace ppedv.ProjectSelma.Logic
 {
     public class Core
     {
-        public Core(IRepository repository)
+        public Core(IRepository repository, IDevice device)
         {
             this.repository = repository;
-            driver = new RoboRecruiterDriver();
+            this.device = device;
         }
 
         private readonly IRepository repository;// EF oder Azure oder .xml ....
-        private readonly RoboRecruiterDriver driver;
+        private readonly IDevice device;
 
         public IEnumerable<Person> GetAllPeople()
         {
@@ -32,7 +32,19 @@ namespace ppedv.ProjectSelma.Logic
 
         public IEnumerable<Person> RecruitFivePersons()
         {
-            return driver.RecruitPersons(5);
+            return RecruitPersons(5);
+        }
+
+        public IEnumerable<Person> RecruitPersons(int amount)
+        {
+            if (amount < 0)
+                throw new ArgumentException();
+            List<Person> persons = new List<Person>();
+            for (int i = 0; i < amount; i++)
+            {
+                persons.Add(device.RecruitPerson()); 
+            }
+            return persons;
         }
     }
 }
