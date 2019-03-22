@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ppedv.ProjectSelma.Data.EF"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ppedv.ProjectSelma.Data.EF.Tests", "ppedv.ProjectSelma.Data.EF.Tests\ppedv.ProjectSelma.Data.EF.Tests.csproj", "{3CCB57A4-F51D-4689-ADA5-E3829AA58546}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ppedv.ProjectSelma.Logic", "ppedv.ProjectSelma.Logic\ppedv.ProjectSelma.Logic.csproj", "{EB937CB3-97B7-4FBD-AB47-DC2E63DA912A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{3CCB57A4-F51D-4689-ADA5-E3829AA58546}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3CCB57A4-F51D-4689-ADA5-E3829AA58546}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3CCB57A4-F51D-4689-ADA5-E3829AA58546}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EB937CB3-97B7-4FBD-AB47-DC2E63DA912A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EB937CB3-97B7-4FBD-AB47-DC2E63DA912A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EB937CB3-97B7-4FBD-AB47-DC2E63DA912A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EB937CB3-97B7-4FBD-AB47-DC2E63DA912A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
