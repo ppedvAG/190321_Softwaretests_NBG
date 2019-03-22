@@ -33,7 +33,20 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AutoFixture, Version=4.8.0.0, Culture=neutral, PublicKeyToken=b24654c590009d4f, processorArchitecture=MSIL">
+      <HintPath>..\packages\AutoFixture.4.8.0\lib\net452\AutoFixture.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Fare, Version=2.1.0.0, Culture=neutral, PublicKeyToken=ea68d375bf33a7c8, processorArchitecture=MSIL">
+      <HintPath>..\packages\Fare.2.1.1\lib\net35\Fare.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -48,6 +61,25 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ppedv.ProjectSelma.Data.EF\ppedv.ProjectSelma.Data.EF.csproj">
+      <Project>{cddcb32e-ff73-4acb-94ab-d411bac68a21}</Project>
+      <Name>ppedv.ProjectSelma.Data.EF</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ppedv.ProjectSelma.Domain\ppedv.ProjectSelma.Domain.csproj">
+      <Project>{296821f7-d7ca-4be6-a317-60de8b167065}</Project>
+      <Name>ppedv.ProjectSelma.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ppedv.ProjectSelma.Hardware.RoboRecruiter\ppedv.ProjectSelma.Hardware.RoboRecruiter.csproj">
+      <Project>{97c0d53c-085f-4324-b9a0-cbf1faeef802}</Project>
+      <Name>ppedv.ProjectSelma.Hardware.RoboRecruiter</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ppedv.ProjectSelma.Logic\ppedv.ProjectSelma.Logic.csproj">
+      <Project>{eb937cb3-97b7-4fbd-ab47-dc2e63da912a}</Project>
+      <Name>ppedv.ProjectSelma.Logic</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
