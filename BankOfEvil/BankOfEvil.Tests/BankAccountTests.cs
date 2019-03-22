@@ -1,4 +1,5 @@
 ﻿using System;
+using Microsoft.QualityTools.Testing.Fakes;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace BankOfEvil.Tests
@@ -124,5 +125,24 @@ namespace BankOfEvil.Tests
         #endregion
 
         // Zustand wäre bereit zum "einchecken"
+
+        [TestMethod]
+        public void BankAccount_Wealth()
+        {
+            using (ShimsContext.Create())
+            {
+                var ba = new BankAccount();
+
+                Fakes.ShimBankAccount.AllInstances.BalanceGet = x => 0;
+                Assert.AreEqual(Wealth.Zero, ba.Wealth);
+
+                Fakes.ShimBankAccount.AllInstances.BalanceGet = x => 5000;
+                Assert.AreEqual(Wealth.MiddleClass, ba.Wealth);
+
+                Fakes.ShimBankAccount.AllInstances.BalanceGet = x => 250_000;
+                Assert.AreEqual(Wealth.Rich, ba.Wealth);
+            }
+
+        }
     }
 }
