@@ -131,6 +131,9 @@ namespace ppedv.ProjectSelma.Data.EF.Tests
         {
             var fix = new Fixture();
 
+            // Zyklisch oder rekursive Verweise:
+            // fix.Behaviors.Add(new OmitOnRecursionBehavior());
+
             // fix.Create<Person>(); // --> Einzelne Person
             // fix.CreateMany<Person>(); // --> Mehrere Personen
 
