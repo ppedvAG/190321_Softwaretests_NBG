@@ -2,7 +2,7 @@
 
 namespace ppedv.ProjectSelma.Domain
 {
-    public class Company
+    public class Company : Entity
     {
         public string Name { get; set; }
         public decimal AnnualIncome { get; set; }

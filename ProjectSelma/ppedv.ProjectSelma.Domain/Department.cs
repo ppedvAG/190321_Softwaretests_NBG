@@ -2,7 +2,7 @@
 
 namespace ppedv.ProjectSelma.Domain
 {
-    public class Department
+    public class Department : Entity
     {
         public string Name { get; set; }
         public virtual Person Head { get; set; }
