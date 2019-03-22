@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ppedv.ProjectSelma.Logic.Te
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ppedv.ProjectSelma.Hardware.RoboRecruiter", "ppedv.ProjectSelma.Hardware.RoboRecruiter\ppedv.ProjectSelma.Hardware.RoboRecruiter.csproj", "{97C0D53C-085F-4324-B9A0-CBF1FAEEF802}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ppedv.ProjectSelma.Logic.Driver", "ppedv.ProjectSelma.Logic.Driver\ppedv.ProjectSelma.Logic.Driver.csproj", "{5B03AEB2-9F3F-4911-9ACB-158ADB9BEAAF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +47,10 @@ Global
 		{97C0D53C-085F-4324-B9A0-CBF1FAEEF802}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{97C0D53C-085F-4324-B9A0-CBF1FAEEF802}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{97C0D53C-085F-4324-B9A0-CBF1FAEEF802}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5B03AEB2-9F3F-4911-9ACB-158ADB9BEAAF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5B03AEB2-9F3F-4911-9ACB-158ADB9BEAAF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5B03AEB2-9F3F-4911-9ACB-158ADB9BEAAF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5B03AEB2-9F3F-4911-9ACB-158ADB9BEAAF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
