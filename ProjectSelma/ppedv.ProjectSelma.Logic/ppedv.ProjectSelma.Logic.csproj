@@ -6,6 +6,8 @@
 
   <ItemGroup>
     <ProjectReference Include="..\ppedv.ProjectSelma.Domain\ppedv.ProjectSelma.Domain.csproj" />
+    <ProjectReference Include="..\ppedv.ProjectSelma.Hardware.RoboRecruiter\ppedv.ProjectSelma.Hardware.RoboRecruiter.csproj" />
+    <ProjectReference Include="..\ppedv.ProjectSelma.Logic.Driver\ppedv.ProjectSelma.Logic.Driver.csproj" />
   </ItemGroup>
 
 </Project>

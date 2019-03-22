@@ -36,7 +36,7 @@ namespace ppedv.ProjectSelma.Logic.Tests
         }
 
         [Fact]
-        public void Core_GetPersonWithHighestBalance()
+        public void Core_Can_GetPersonWithHighestBalance()
         {
             var mock = new Mock<IRepository>();
             // Konfiguration
@@ -56,6 +56,16 @@ namespace ppedv.ProjectSelma.Logic.Tests
 
             var result = core.GetPersonWithHighestBalance(); // Typische Businesslayer-Logik: Hol was aus der DB 
             Assert.Equal("Martha", result.FirstName);
+        }
+
+        [Fact]
+        public void Core_Can_RecruitFivePersons()
+        {
+            var mock = new Mock<IRepository>();
+            var core = new Core(mock.Object);
+
+            var result = core.RecruitFivePersons();
+            Assert.Equal(5, result.Count());
         }
     }
 }
