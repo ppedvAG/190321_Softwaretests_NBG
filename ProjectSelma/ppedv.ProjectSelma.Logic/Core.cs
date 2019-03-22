@@ -2,6 +2,7 @@
 using ppedv.ProjectSelma.Domain.Interfaces;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace ppedv.ProjectSelma.Logic
 {
@@ -17,6 +18,13 @@ namespace ppedv.ProjectSelma.Logic
         public IEnumerable<Person> GetAllPeople()
         {
             return repository.GetAll<Person>();
+        }
+
+        public Person GetPersonWithHighestBalance()
+        {
+            return repository.GetAll<Person>()
+                             .OrderByDescending(x => x.Balance)
+                             .FirstOrDefault();
         }
     }
 }
