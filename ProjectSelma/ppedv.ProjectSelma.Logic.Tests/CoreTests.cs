@@ -14,6 +14,7 @@ namespace ppedv.ProjectSelma.Logic.Tests
     public class CoreTests
     {
         [Fact]
+        [Trait("Core_Unit",null)]
         public void Core_GetAllPeople_Get_Exactly_5_People()
         {
             var mock = new Mock<IRepository>();
@@ -37,6 +38,7 @@ namespace ppedv.ProjectSelma.Logic.Tests
         }
 
         [Fact]
+        [Trait("Core_Unit", null)]
         public void Core_Can_GetPersonWithHighestBalance()
         {
             var mock = new Mock<IRepository>();
@@ -60,6 +62,7 @@ namespace ppedv.ProjectSelma.Logic.Tests
         }
 
         [Fact]
+        [Trait("Core_Unit", null)]
         public void Core_Can_RecruitFivePersons()
         {
             var driverMock = new Mock<IDevice>();
@@ -78,6 +81,7 @@ namespace ppedv.ProjectSelma.Logic.Tests
         }
 
         [Fact]
+        [Trait("Core_Unit", null)]
         public void Core_RecruitPersons_with_invalid_amount_throws_ArgumentException()
         {
             var driverMock = new Mock<IDevice>();
